@@ -1,0 +1,151 @@
+.game {
+    display: flex;
+    align-items: center;
+
+    flex-direction: column;
+}
+
+.user {
+    margin-top: 32px;
+}
+
+.board {
+    display: flex;
+    width: 600px;
+    height: 600px;
+    flex-direction: column;
+}
+
+.board-row {
+    display: flex;
+    flex: 1;
+}
+
+.sqare {
+    flex: 1;
+    background-color: #00acc1;
+    border: 2px solid #fff;
+    position: relative;
+    font-size: 60px;
+    color: aliceblue;
+}
+
+.sqare:hover {
+    background-color: #007c91;
+}
+
+
+.icon-cross {
+    font-size: 92px;
+        color: #000;
+}
+
+.icon-cross::before {
+    position: absolute;
+    color: #fff;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.icon-radio-unchecked {
+    font-size: 92px;
+    color: #000;
+}
+
+.icon-radio-unchecked::before {
+    position: absolute;
+    color: #fff;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.antialiased{
+    background: #e3f2fd;;
+}
+
+.name-user{
+    font-size:30px;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.fa.fa-user-secret{
+    font-size:30px;
+    color: #0097a7;
+}
+.fa.fa-android{
+    font-size:30px;
+    color: #0097a7;
+}
+.player-turn{
+    font-size:45px;
+}
+
+.new-game{
+    display: none;
+    background-color: #00acc1;
+    position: relative;
+    font-size: 25px;
+    color: aliceblue;
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 25px;
+}
+.new-game:hover {
+    background-color: #007c91;
+}
+
+.title-game{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, serif;
+    font-size: 50px;
+
+}
+.pannel-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+.option-button{
+    border: 5px solid #00acc1   ;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    flex-direction: column;
+    display: inline-flex;
+}
+
+.link-game{
+    -moz-appearance: button;
+    font-size: 50px;
+    text-decoration: none;
+    margin: 10px;
+    border: 10px solid #007c91;
+    background: #5ddef4;
+    color: aliceblue;
+    padding: 10px;
+}
+
+.link-game:hover{
+    background-color: #007c91;
+}
+
+.button-back{
+    -moz-appearance: button;
+    font-size: 20px;
+    text-decoration: none;
+
+    margin: 5px;
+    border: 2px solid #007c91;
+    background: #5ddef4;
+    color: aliceblue;
+    padding: 5px;
+}
+.button-back:hover{
+    background-color: #007c91;
+}
