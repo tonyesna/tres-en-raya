@@ -40,13 +40,13 @@ function sendDataGame(position,type_game) {
             success: function (data) {
                 turn = data.data.turn;
                 type_game = data.data.type_game;
-                console.log(data);
+
                 let move_computer = data.data.move_computer;
                 if(type_game === "2"){
-                    console.log("aaa"+type_game+turn);
+
                     $(".position_" + move_computer).text("O")
                 }
-                console.log("bbb"+type_game+turn);
+
                 isEndGame(data.data);
                 $('#myturn').text(turn);
 
