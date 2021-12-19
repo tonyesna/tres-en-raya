@@ -1,7 +1,17 @@
+/**
+ * Function that checks if we can continue clicking on the board.
+ * @param position
+ * @returns {boolean}
+ */
+
 function iCanClick(position) {
     return $(".position_" + position).text() === "";
 }
 
+/**
+ * Function that checks if the game is over and displays the Winner and the New Game button.
+ * @param data
+ */
 function isEndGame(data) {
     if (data.state) {
         if (data.winner.length !== 0) {
@@ -18,7 +28,11 @@ function isEndGame(data) {
 }
 
 
-
+/**
+ * Function that sends the data of each move
+ * @param position
+ * @param type_game
+ */
 function sendDataGame(position,type_game) {
 
     if (iCanClick(position)) {
@@ -60,6 +74,10 @@ function sendDataGame(position,type_game) {
 
 }
 
+/**
+ * Function that creates a new game
+ * @param type_game
+ */
 function newGame(type_game) {
 
     $.ajax({

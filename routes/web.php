@@ -13,12 +13,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/** Menú inicial elección modo de juego **/
 Route::get('/', function () {
-    return view('welcome');
+    return view('menu');
 }) ->name('menu');;
 
-
+/** Lógica del panel de juego **/
 Route::get('/game', [\App\Http\Controllers\GameController::class, 'index']);
 
 Route::post('/game', [\App\Http\Controllers\GameController::class, 'saveGameState']);

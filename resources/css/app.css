@@ -4,52 +4,22 @@
     margin-top: 160px;
     flex-direction: column;
 }
-
 .user {
     margin-top: 32px;
 }
-
 .board {
     display: flex;
     width: 600px;
     height: 600px;
     flex-direction: column;
 }
-
 .board-row {
     display: flex;
     flex: 1;
 }
-
 .sqare {
     flex: 1;
     background-color: #26c6da;
     border: 2px solid #fff;
     position: relative;
-}
-
-.icon-cross {
-    font-size: 92px;
-    color: #000;
-}
-
-.icon-cross::before {
-    position: absolute;
-    color: #fff;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.icon-radio-unchecked {
-    font-size: 92px;
-    color: #000;
-}
-
-.icon-radio-unchecked::before {
-    position: absolute;
-    color: #fff;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
 }

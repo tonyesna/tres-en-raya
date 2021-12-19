@@ -17,15 +17,15 @@ Proyecto donde se realiza el popular juego del Tres en Raya programado bajo el F
 * Clonar el proyecto:
 
   `git clone https://github.com/tonyesna/tres-en-raya.git`
-
-* Generar vendors
-
+* Acceder a la raiz tres-en-raya  
+  `cd  tres-en-raya`
+* Generar vendors  
   `composer install`
 
 * Configurar las variables de entorno:
 
     `copiar el fichero .env.example a .env cp .env.example .env`
-* Crear una tabla en tu base de datos 
+* Crear una tabla en tu base de datos   
     `nombre de la base de datos => tresenraya`
 * Cambiar en el .env la variables de configuración de BBDD. Estarán con el valor genérico:
 
@@ -55,14 +55,7 @@ Test Unitarios sobre un solo test:
 
 [![Watch the video](https://img.youtube.com/vi/_VXCsyJ2zls/3.jpg)](https://youtu.be/_VXCsyJ2zls)
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## License
+## Licencia
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

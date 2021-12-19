@@ -10,6 +10,7 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
+
 class GameController extends Controller
 {
 
@@ -18,6 +19,7 @@ class GameController extends Controller
     const  WIN_PLAYER_2 = ["O", "O", "O"];
 
     /**
+     * Method that searches for an existing game board or creates a new one depending on the type of game.
      * @param int $index
      * @return Application|Factory|View
      */
@@ -48,6 +50,7 @@ class GameController extends Controller
 
 
     /**
+     * Method that creates a new set for a specific type.
      * @param Request $request
      * @return void
      */
@@ -69,11 +72,10 @@ class GameController extends Controller
         } catch (\Exception $ex) {
             dd("ERROR ", "LINE: ", __LINE__, " METHOD:", __METHOD__, $ex);
         }
-
-
     }
 
     /**
+     * Method that returns the type of game passed by parameter
      * @return Application|Factory|View
      */
     public function typeGame()
@@ -92,6 +94,7 @@ class GameController extends Controller
 
 
     /**
+     *  Method that generates an empty board
      * @param int $index
      * @return array
      */
@@ -114,6 +117,7 @@ class GameController extends Controller
     }
 
     /**
+     * Method that keeps track of the status of each move
      * @param Request $request
      * @return JsonResponse
      */
@@ -166,13 +170,14 @@ class GameController extends Controller
                 ['board_game' => $board, 'turn' => $turn, 'state' => $state, 'type_game' => $type_game]);
 
 
-            return response()->json(['success' => 'Got Simple Ajax Request.', 'data' => $data]);
+            return response()->json(['success' => 'OK', 'data' => $data]);
         } catch (\Exception $ex) {
             dd("ERROR ", "LINE: ", __LINE__, " METHOD:", __METHOD__, $ex);
         }
     }
 
     /**
+     * Method that returns the movement performed by the computer.
      * @param array $board
      * @return array
      */
@@ -195,6 +200,7 @@ class GameController extends Controller
     }
 
     /**
+     * Method that checks for voids
      * @param array $board
      * @return array
      */
@@ -217,6 +223,7 @@ class GameController extends Controller
     }
 
     /**
+     * Method retrieving a database dashboard
      * @param int $type_game
      * @return array
      */
@@ -233,6 +240,7 @@ class GameController extends Controller
     }
 
     /**
+     * A method that recovers a board if there is a winner.
      * @param array $board
      * @return array
      */
@@ -256,6 +264,7 @@ class GameController extends Controller
     }
 
     /**
+     * Method that checks the row
      * @param array $board
      * @return array
      */
@@ -282,6 +291,7 @@ class GameController extends Controller
     }
 
     /**
+     * Method that checks the column
      * @param array $board
      * @return array
      */
@@ -308,6 +318,7 @@ class GameController extends Controller
     }
 
     /**
+     * Method that checks the diagonal
      * @param array $board
      * @return array
      */
@@ -345,6 +356,7 @@ class GameController extends Controller
     }
 
     /**
+     * Method that tests the possible combinations
      * @param int $index
      * @return array|int[]
      */
@@ -367,7 +379,11 @@ class GameController extends Controller
 
     }
 
-    public function getGameModel()
+    /**
+     * Method that returns a Game model
+     * @return Game
+     */
+    public function getGameModel(): Game
     {
         try {
             return resolve(Game::class);

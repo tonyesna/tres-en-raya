@@ -1,10 +1,11 @@
+/** Estilos Panel de juego --- START**/
+
 .game {
     display: flex;
     align-items: center;
 
     flex-direction: column;
 }
-
 .user {
     margin-top: 32px;
 }
@@ -34,32 +35,6 @@
     background-color: #007c91;
 }
 
-
-.icon-cross {
-    font-size: 92px;
-        color: #000;
-}
-
-.icon-cross::before {
-    position: absolute;
-    color: #fff;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.icon-radio-unchecked {
-    font-size: 92px;
-    color: #000;
-}
-
-.icon-radio-unchecked::before {
-    position: absolute;
-    color: #fff;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
 
 .antialiased{
     background: #e3f2fd;;
@@ -96,7 +71,9 @@
 .new-game:hover {
     background-color: #007c91;
 }
+/** Estilos Panel de juego --- END**/
 
+/** Estilos MENU de juego --- START**/
 .title-game{
     display: flex;
     justify-content: center;
@@ -139,7 +116,6 @@
     -moz-appearance: button;
     font-size: 20px;
     text-decoration: none;
-
     margin: 5px;
     border: 2px solid #007c91;
     background: #5ddef4;
@@ -149,3 +125,4 @@
 .button-back:hover{
     background-color: #007c91;
 }
+/** Estilos MENU de juego --- END**/
